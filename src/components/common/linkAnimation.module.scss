@@ -1,0 +1,36 @@
+@import './basic.scss';
+.linkWithAnimation {
+
+        a,a:hover,a:active{
+        -webkit-backface-visibility:hidden;
+                backface-visibility:hidden;
+        position: relative;
+        transition: 0.2s color ease;
+        }
+
+        a:hover{
+        color:$secondary-color;
+        }
+
+        a:after{
+        content: "";
+        transition:0.5s all ease;
+        -webkit-backface-visibility:hidden;
+                backface-visibility:hidden;
+        position:absolute;
+        bottom:-0.25em;
+        height: 2px;
+        width:0;
+        background: $secondary-color;
+        }
+
+        a:after{
+        left:50%;
+        -webkit-transform:translateX(-50%);
+                transform:translateX(-50%);
+        }
+
+        a:hover:after{
+        width:100%;
+        }
+}

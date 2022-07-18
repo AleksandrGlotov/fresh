@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import s from './App.module.scss';
+import { AboutFresh } from './components/AboutFresh/Aboutfresh';
+import { Bands } from './components/Bands/Bands';
+import { Eat } from './components/Eat/Eat';
+import { FirstScreen } from './components/FirstScreen/FirstScreen';
+import { Footer } from './components/Footer/Footer';
+import { Games } from './components/Games/Games';
+import { InfoBlock } from './components/InfoBlock/InfoBlock';
+import { Road } from './components/Road/Road';
+import { Sleep } from './components/Sleep/Sleep';
+import { Tickets } from './components/Tickets/Tickets';
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={s.container}>
+      <FirstScreen />
+      <AboutFresh />
+      <Bands />
+      <Tickets />
+      <Eat />
+      <Sleep />
+      <Games />
+      <InfoBlock />
+      <Road />
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,164 @@
+@import '../common/basic.scss';
+
+.eatContainer {
+    width: 1218px;
+    margin: 100px auto;
+
+    @media screen and (max-width: 1280px) {
+        width: 960px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 728px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+}
+
+.eatText {
+    width: 594px;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.eatHeader {
+    font-size: $h2;
+    color: $txt-secondary;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 768px) {
+        font-size: $h3;
+    }
+}
+
+.eatDescription {
+    font-size: $body;
+    color: $txt-light;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 768px) {
+        font-size: $body-mob;
+    }
+}
+
+.eatGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.eatGalleryMobile {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}
+
+.eatImgContainer {
+    width: 594px;
+    height: 369px;
+    margin-bottom: 30px;
+    position: relative;
+
+    @media screen and (max-width: 1280px) {
+        width: 470px;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 354px;
+        height: 278px;
+    }
+}
+
+.eatLt {
+    height: 369px;
+    width: 939px;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+
+    @media screen and (max-width: 1920px) {
+        width: 594px;
+        height: 369px;
+    }
+
+    @media screen and (max-width: 1280px) {
+        width: 470px;
+    }
+}
+
+.eatRt {
+    height: 594px;
+    width: 594px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @media screen and (max-width: 1920px) {
+        width: 594px;
+        height: 369px;
+    }
+
+    @media screen and (max-width: 1280px) {
+        width: 470px;
+        height: 369px;
+    }
+}
+
+.eatLb {
+    height: 369px; 
+    width: 594px;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+
+    @media screen and (max-width: 1920px) {
+        width: 594px;
+        height: 369px;
+    }
+
+    @media screen and (max-width: 1280px) {
+        width: 470px;
+    }
+}
+
+.eatRb {
+    height: 369px;
+    width: 939px;
+    object-fit: cover;
+    object-position: left -180px;
+    position: absolute;
+    left: 0;
+
+    @media screen and (max-width: 1920px) {
+        width: 594px;
+        height: 369px;
+        object-position: left top;
+    }
+
+    @media screen and (max-width: 1280px) {
+        width: 470px;
+    }
+}
+
+.eatRb, .eatLb, .eatLt, .eatRt {
+
+    @media screen and (max-width: 1000px) {
+        width: 354px;
+        height: 278px;
+    }
+}
+

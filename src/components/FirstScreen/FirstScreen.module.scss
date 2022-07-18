@@ -1,0 +1,68 @@
+@import '../common/basic.scss';
+
+.mainBG {
+    min-height: 100vh;
+    background: url(./image/bg.png);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    position: relative;
+
+    p {
+        width: 383px;
+        text-align: center;
+        color: $txt-primary;
+        margin-top: 100px;
+        margin-bottom: auto;
+
+        @media screen and (max-width: 480px) {
+            width: 210px;
+            font-size: $body-mob;
+        }
+    }
+
+    h1 {
+        font-size: 45vh;
+        color: $txt-primary;
+        position: absolute;
+        margin-top: 100px;
+
+        @media screen and (max-width: 1280px) {
+            font-size: 284px;
+            margin-top: 150px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 220px;
+            margin-top: 25vh;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 136px;
+            margin-top: 40vh;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 80px;
+        }
+    }
+
+    button {
+        margin-bottom: 100px;
+
+        @media screen and (max-width: 1000px) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 50px;
+        }
+    }
+}

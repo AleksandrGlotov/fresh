@@ -1,0 +1,61 @@
+@import '../common/basic.scss';
+
+.gamesList {
+    width: 1218px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1280px) {
+        width: 960px;
+    }
+    
+    @media screen and (max-width: 1000px) {
+        width: 728px;
+    }
+    
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 16px;
+    }    
+}
+
+.gamesText {
+    width: 386px;
+    height: 282px;
+
+    @media screen and (max-width: 1280px) {
+        width: 470px;
+        height: 343px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 354px;
+        height: 260px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.gamesTextHeader {
+    font-size: $h2;
+    color: $txt-secondary;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 768px) {
+        font-size: $h3;
+    }
+}
+
+.gamesTextDescription {
+    color: $txt-light;
+
+    @media screen and (max-width: 768px) {
+        font-size: $body-mob;
+        margin-bottom: 30px;
+    }
+}

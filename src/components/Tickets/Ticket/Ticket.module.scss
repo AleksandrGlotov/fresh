@@ -1,0 +1,132 @@
+@import '../../common/basic.scss';
+
+.ticket {
+    width: 283px;
+    height: 373px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+
+    @media screen and (max-width: 1280px) {
+        width: 225px;
+        height: 395px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 354px;
+        height: 350px;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: calc(50% - 20px);
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.ticketTitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px 0;
+    font-weight: 400;
+    color: $txt-primary;
+
+    @media screen and (max-width: 768px) {
+        font-size: $body;
+    }
+}
+
+.dashedLine {
+    border: 0;
+    border-bottom: 10px dashed $primary-color;
+    background: white;
+    width: 100%;
+    transform: skew(-30deg) scale(1.1);
+}
+
+.description {
+    color: $txt-placeholder;
+    text-align: center;
+    margin-top: 20px;
+    width: 232px;
+    height: 80px;
+
+    @media screen and (max-width: 1280px) {
+        width: 175px;
+        height: 100px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 304px;
+        height: 55px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $body-mob;
+        width: calc(100% - 40px);
+        min-height: 95px;
+    }
+
+    @media screen and (max-width: 480px) {
+        min-height: 75px;
+    }
+}
+
+.price {
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: $body;
+    color: $txt-primary;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+    p {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+    }
+}
+
+.counterButton {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $txt-primary;;
+    background-color: $secondary-color;
+    font-size: $h4;
+    cursor: pointer;
+    color: $txt-primary;
+
+    &:active {
+        background-color: $secondary-dark-color;
+    }
+}
+
+.buyButton {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-top: 1px solid $txt-primary;;
+    background-color: $secondary-color;
+    font-size: $body;
+    color: $txt-primary;
+    cursor: pointer;
+    margin-top: auto;
+
+    &:active {
+        background-color: $secondary-dark-color;
+    }
+}

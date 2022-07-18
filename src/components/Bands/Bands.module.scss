@@ -1,0 +1,48 @@
+@import '../common/basic.scss';
+
+.bandsContainer {
+  padding: 100px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 16px;
+  }
+}
+
+.bandsCenter {
+  width: 1218px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1280px) {
+    width: 960px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 728px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.bandsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    color: $txt-secondary;
+    font-size: $h2;
+
+    @media screen and (max-width: 768px) {
+      font-size: $h3;
+    }
+  }
+}

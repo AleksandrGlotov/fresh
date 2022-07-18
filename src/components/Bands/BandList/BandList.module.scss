@@ -1,0 +1,7 @@
+@import '../../common/basic.scss';
+
+.bandList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

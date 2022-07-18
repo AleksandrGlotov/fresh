@@ -1,0 +1,121 @@
+@import '../../common/basic.scss';
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sendFormContainer {
+    margin-top: 78px;
+    width: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid $secondary-color;
+    padding: 50px;
+
+    @media screen and (max-width: 1280px) {
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 354px;
+        padding: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+
+}
+
+.sendFormHeader {
+    font-size: $h3;
+    color: $txt-secondary;
+    margin-bottom: 25px;
+}
+
+.sendFormDescription {
+    color: $txt-light;
+    margin-bottom: 25px;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+        font-size: $body-mob;
+    }
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    position: relative;
+    width: 100%;
+
+    label {
+        margin-bottom: 4px;
+    }
+
+    span {
+        position: absolute;
+        top: 54px;
+        left: 0;
+        font-size: 12px;
+        color: rgb(191, 49, 12);
+    }
+
+    input {
+        padding: 10px 14px;
+        background-color: transparent;
+        margin-bottom: 0px;
+        border: 2px solid $txt-primary;
+        position: relative;
+        color: $txt-secondary;
+        font-size: $body;
+        line-height: 22px;
+        width: 100%;
+
+        @media screen and (max-width: 768px) {
+            font-size: $body-mob;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $txt-secondary;
+            opacity: 0.4;
+        }
+
+        &:focus {
+            // box-shadow: rgb(210, 213, 217) 0px 0px 2px 1px, rgb(227, 230, 232) 0px 0px 0px
+            // 3px;
+            border: 2px solid $secondary-color;
+            outline: none;
+        }
+
+        &.is_invalid {
+            border: 2px solid rgb(191, 49, 12);
+
+            &:focus,
+            &:active {
+                // box-shadow: rgb(244, 129, 116) 0px 0px 2px 1px, rgb(251, 178, 174) 0px 0px
+                //     0px 3px;
+                border: 2px solid rgb(191, 49, 12);
+                outline: none;
+            }
+        }
+
+        &.is_valid {
+            border: 2px solid rgb(106, 237, 97);
+
+            &:focus,
+            &:active {
+                // box-shadow: rgb(106, 237, 97) 0px 0px 2px 1px, rgb(177, 247, 160) 0px 0px 0px 3px;
+                outline: none;
+            }
+        }
+
+    } 
+}

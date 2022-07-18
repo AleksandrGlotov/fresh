@@ -1,0 +1,65 @@
+@import '../common/basic.scss';
+
+.ticketsContainer {
+    width: 1218px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1280px) {
+        width: 960px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 728px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 16px;
+    }
+}
+
+.t {
+    font-size: $h2;
+    color: $txt-secondary;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 1280px) {
+        text-align: left;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $h3;
+    }
+}
+
+.ps {
+    color: $txt-light;
+    text-align: center;
+    width: 680px;
+    margin: 0 auto 30px;
+
+    @media screen and (max-width: 1280px) {
+        text-align: left;
+        margin: 0 0 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $body-mob;
+        width: 100%;
+    }
+}
+
+.ticketsList {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1000px) {
+        width: 728px;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}

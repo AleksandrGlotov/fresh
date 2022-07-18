@@ -1,0 +1,142 @@
+@import '../common/basic.scss';
+
+.aboutFreshCenter {
+    display: flex;
+    margin: 100px auto 0;
+    width: 1218px;
+    overflow-x: visible;
+
+    @media screen and (max-width: 1280px) {
+        width: 960px;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 728px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.aboutFreshLeft {
+    min-width: 609px;
+    padding-right: 15px;
+
+    @media screen and (max-width: 1280px) {
+        padding-right: 0;
+        min-width: 960px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        min-width: 728px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    @media screen and (max-width: 768px) {
+        min-width: 100%;
+        padding: 0 16px;
+    }
+}
+
+.aboutFreshRight {
+    width: 955px;
+
+    @media screen and (max-width: 1920px) {
+        width: 50vw;
+    }
+
+    @media screen and (max-width: 1280px) {
+        width: 100%;
+    }
+}
+
+.aboutFreshHead {
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 1280px) {
+        min-width: 450px;
+        margin-right: 35px;
+    }
+
+    @media screen and (max-width: 768px) {
+        min-width: 100%;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: $h2;
+        color: $txt-secondary;
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 768px) {
+            font-size: $h3;
+        }
+    }
+
+    p {
+        font-size: $body;
+        color: $txt-light;
+        margin: 0;
+
+        @media screen and (max-width: 768px) {
+            font-size: $body-mob;
+        }
+    }
+}
+
+.aboutFreshPluses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.plus {
+    width: 282px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 1280px) {
+        width: 225px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 282px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: calc(50% - 10px);
+    }
+
+    h2 {
+        font-size: $h2;
+        color: $txt-secondary;
+        margin-top: 0;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 768px) {
+            font-size: $h3;
+        }
+    }
+
+    p {
+        font-size: $body;
+        color: $txt-light;
+        margin: 0;
+        line-height: 1.3;
+
+        @media screen and (max-width: 768px) {
+            font-size: $body-mob;
+        }
+    }
+}

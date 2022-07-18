@@ -1,0 +1,90 @@
+@import '../common/basic.scss';
+
+header {
+	width: 1218px;
+	height: 60px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+    @media screen and (max-width: 1280px) {
+        width: 960px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 728px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+	span {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.3;
+		font-family: $font-h;
+	}
+}
+
+.headerNavigation {
+
+	@media screen and (max-width: 1280px) {
+		display: none;
+	}
+
+	ul {
+		width: 764px;
+		display: flex;
+		justify-content: space-between;
+
+		li {
+			list-style-type: none;
+		}
+	}
+
+	a {
+		font-size: $body;
+		line-height: 1.3;
+		text-decoration: none;
+		color: $txt-primary;
+	}
+}
+
+.social {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+
+	img {
+		cursor: pointer;
+	}
+}
+
+.burger {
+    display: none;
+
+    @media screen and (max-width: 1280px) {
+        display: block;
+		position: relative;
+		width: 60px;
+		height: 60px;
+    }
+}
+
+.headerLinksImage {
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
+}

@@ -1,0 +1,34 @@
+@import '../../common/basic.scss';
+
+.faqContainer {
+    width: 698px;
+
+    @media screen and (max-width: 1280px) {
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 354px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+
+.faqHeader {
+    font-size: $h2;
+    color: $txt-secondary;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 768px) {
+        font-size: $h3;
+    }
+}
+
+.faqList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,64 @@
+@import '../../../common/basic.scss';
+
+.faqLine {
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+    height: 36px;
+    overflow: hidden;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+
+    @media screen and (max-width: 480px) {
+        height: 52px;
+    }
+}
+
+.faqLineActive {
+    height: auto;
+    overflow: visible;
+}
+
+.faqLineTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.faqLineText {
+    font-size: $h4;
+    color: $txt-light;
+
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
+}
+
+.faqLineImage {
+    width: 36px;
+    height: 36px;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.faqLineImageActive {
+    transform: rotate(180deg);
+}
+
+.faqLineDrop {
+    color: $txt-secondary;
+    // position: absolute;
+    width: calc(100% - 36px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+
+    @media screen and (max-width: 768px) {
+        font-size: $body-mob;
+    }
+}
+
+.faqLineDropActive {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

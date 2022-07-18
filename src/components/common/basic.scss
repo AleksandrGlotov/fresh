@@ -1,0 +1,48 @@
+$primary-color: #0C485E;
+$primary-dark-color: #072C39;
+$secondary-color: #FBFE56;
+$secondary-dark-color: #A6A901;
+$secondary-light-color: #FDFE9A;
+$txt-primary: #333;
+$txt-secondary: #FBFE56;
+$txt-placeholder: #A9A9A9;
+$txt-light: #FFFFFF;
+$font-h: 'Roboto Slab', serif;
+$font-p: 'Roboto', sans-serif;
+
+$h1: 72px;
+$h2: 42px;
+$h3: 28px;
+$h4: 24px;
+$body: 17px;
+$body-mob: 15px;
+
+
+
+
+.width_1218 {
+    width: 1218px;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primary-color;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: $font-h;
+    margin: 0;
+    font-weight: 400;
+}
+
+p, span {
+    font-family: $font-p;
+    line-height: 1.3;
+    margin: 0;
+    font-size: $body;
+}
