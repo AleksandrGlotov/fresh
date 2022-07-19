@@ -1,12 +1,16 @@
 import s from './FAQ.module.scss'
 import { FAQLine } from './FAQLine/FAQLine';
+import { Element } from 'react-scroll'
+
 
 export const FAQ: React.FC = () => {
     return (
         <div className={s.faqContainer}>
-            <h2 className={s.faqHeader}>
-                / FAQ
-            </h2>
+            <Element name='info'>
+                <h2 className={s.faqHeader}>
+                    / FAQ
+                </h2>
+            </Element>
             <ul className={s.faqList}>
                     <FAQLine
                         question='Есть ли на территории интернет?'

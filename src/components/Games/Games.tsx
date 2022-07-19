@@ -5,14 +5,17 @@ import pic2 from './image/2.png'
 import pic3 from './image/3.png'
 import pic4 from './image/4.png'
 import pic5 from './image/5.png'
+import { Element } from 'react-scroll'
 
 export const Games: React.FC = () => {
     return (
         <div className={s.gamesList}>
             <div className={s.gamesText}>
-                <h2 className={s.gamesTextHeader}>
-                    / Развлечения
-                </h2>
+                <Element name='games'>
+                    <h2 className={s.gamesTextHeader}>
+                        / Развлечения
+                    </h2>
+                </Element>
                 <p className={s.gamesTextDescription}>
                     Помимо крутой музыкальной программы, 
                     организаторы превратили территорию фестиваля 

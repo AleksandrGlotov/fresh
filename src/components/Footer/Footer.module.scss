@@ -120,8 +120,14 @@
         text-align: center;
     }
 
-    a {
+    div {
         width: 178px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    a {
         color: $txt-light;
         font-size: $body;
         display: block;
@@ -130,7 +136,6 @@
 
         &:hover {
             color: $txt-secondary;
-            text-decoration: underline;
         }
 
         &:not(:last-child) {

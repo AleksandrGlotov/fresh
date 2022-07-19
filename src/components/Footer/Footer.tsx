@@ -3,6 +3,7 @@ import vk from './image/vk.svg'
 import instagramm from './image/instagramm.svg'
 import telegramm from './image/telegramm.svg'
 import animation from '../common/linkAnimation.module.scss'
+import { Link } from 'react-scroll'
 
 export const Footer = () => {
     return (
@@ -23,15 +24,50 @@ export const Footer = () => {
                 <div className={s.footerThirdColumn}>
                     <h4 className={s.footerHeaders}>Навигация</h4>
                     <nav className={s.footerDescription}>
-                        <div>
-                            <a>Участники</a>
-                            <a>О фестивале</a>
-                            <a>Билеты</a>
+                        <div className={animation.linkWithAnimation}>
+                            <Link
+                                to="bands"
+                                smooth={true}
+                                duration={500}
+                                offset={-100}>
+                                    Участники
+                            </Link>
+                            <Link
+                                to="about"
+                                smooth={true}
+                                duration={500}
+                                offset={-100}>
+                                    О фестивале
+                            </Link>
+                            <Link
+                                to="tickets"
+                                smooth={true}
+                                duration={500}
+                                offset={-100}>
+                                    Билеты
+                            </Link>
                         </div>
-                        <div>
-                            <a>Развлечения</a>
-                            <a>Где жить</a>
-                            <a>Как добраться</a>
+                        <div className={animation.linkWithAnimation}>
+                            <Link
+                                to="games"
+                                smooth={true}
+                                duration={500}
+                                offset={-100}>
+                                    Развлечения
+                            </Link>
+                            <Link
+                                to="sleep"
+                                smooth={true}
+                                duration={500}
+                                offset={-100}>
+                                    Где жить
+                            </Link>
+                            <Link
+                                to="info"
+                                smooth={true}
+                                duration={500}>
+                                    FAQ
+                            </Link>
                         </div>
                     </nav>
                 </div>

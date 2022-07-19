@@ -1,14 +1,17 @@
 import s from './Aboutfresh.module.scss'
 import { Carousel } from './Carousel/Carousel'
+import { Element } from 'react-scroll'
 
 export const AboutFresh: React.FC = () => {
     return (
         <div  className={s.aboutFreshCenter} >
             <div className={s.aboutFreshLeft}>
                 <div className={s.aboutFreshHead}>
-                    <h2>
-                        / О фестивале
-                    </h2>
+                    <Element name='about'>
+                        <h2>
+                            / О фестивале
+                        </h2>
+                    </Element>
                     <p>
                         /фрэш в Белом колодце – фестиваль, без которого представить себе лето уже невозможно. 
                         В одном из самых живописных мест Воронежской области – карьере с меловыми холмами, 

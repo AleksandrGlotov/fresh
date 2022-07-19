@@ -1,13 +1,16 @@
 import s from './Sleep.module.scss'
 import image from './image/image 5.png' 
+import { Element } from 'react-scroll'
 
 export const Sleep: React.FC = () => {
     return (
         <div className={s.sleepContainer}>
             <div className={s.sleepText}>
-                <h2 className={s.sleepHeader}>
-                    / Где жить
-                </h2>
+                <Element name='sleep'>
+                    <h2 className={s.sleepHeader}>
+                        / Где жить
+                    </h2>
+                </Element>
                 <div className={s.sleepDescription}>
                     <p className={s.sleepDescriptionText}>Кемпинг расположен на территории проведения фестиваля. 
                         Жители палаточного лагеря могут бесплатно пользоваться горячим душем, 

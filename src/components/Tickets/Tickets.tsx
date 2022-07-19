@@ -1,10 +1,13 @@
 import { Ticket } from "./Ticket/Ticket"
+import { Element } from 'react-scroll'
 import s from './Tickets.module.scss'
 
 export const Tickets: React.FC = () => {
     return (
         <div className={s.ticketsContainer}>
-            <h2 className={s.t}>/ Билеты</h2>
+            <Element name='tickets'>
+                <h2 className={s.t}>/ Билеты</h2>
+            </Element>
             <p className={s.ps}>Вход на территорию фестиваля возможен только при наличии билета
                 (электронного или бумажного).
                 На входе билеты будут обмениваться на браслеты.

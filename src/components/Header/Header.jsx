@@ -6,36 +6,80 @@ import telegramm from '../FirstScreen/image/telegramm.svg'
 import burger from '../FirstScreen/image/burger.svg'
 import burgerOff from '../FirstScreen/image/burgerOff.svg'
 import animation from '../common/linkAnimation.module.scss'
-
+import { Link } from 'react-scroll'
 import { slide as Menu } from 'react-burger-menu'
 
 
 export const Header = () => {
+	// let Link = Scroll.Link;
+
     return (
         <header className={s.header}>
 			<span>/фреш</span>
 			<nav className={s.headerNavigation}>
 				<ul className={animation.linkWithAnimation}>
 					<li>
-						<a href='/'>Участники</a>
+						<Link
+							to="bands"
+							smooth={true}
+							duration={500}
+							offset={-100}>
+								Участники
+						</Link>
 					</li>
 					<li>
-						<a href='/'>О фестивале</a>
+						<Link
+							to="about"
+							smooth={true}
+							duration={500}
+							offset={-100}>
+								О фестивале
+						</Link>
 					</li>
 					<li>
-						<a href='/'>Билеты</a>
+						<Link
+							to="tickets"
+							smooth={true}
+							duration={500}
+							offset={-100}>
+								Билеты
+						</Link>
 					</li>
 					<li>
-						<a href='/'>Где жить</a>
+						<Link
+							to="sleep"
+							smooth={true}
+							duration={500}
+							offset={-100}>
+								Где жить
+						</Link>
 					</li>
 					<li>
-						<a href='/'>Развлечения</a>
+						<Link
+							to="games"
+							smooth={true}
+							duration={500}
+							offset={-100}>
+								Развлечения
+						</Link>
 					</li>
 					<li>
-						<a href='/'>FAQ</a>
+						<Link
+							to="info"
+							smooth={true}
+							duration={500}
+							offset={-100}>
+								FAQ
+						</Link>
 					</li>
 					<li>
-						<a href='/'>Как добраться</a>
+						<Link
+							to="road"
+							smooth={true}
+							duration={500}
+							offset={-100}>
+								Как добраться
+						</Link>
 					</li>
 				</ul>
 			</nav>

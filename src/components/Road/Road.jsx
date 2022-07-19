@@ -1,8 +1,6 @@
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps'
-import React from 'react';
 import s from './Road.module.scss'
-
+import { Element } from 'react-scroll'
 
 const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -13,16 +11,13 @@ const defaultCenter = {
 
 export const Road = () => {
 
-    const { isLoaded } = useJsApiLoader({
-        id: 'google-map-script',
-        googleMapsApiKey: API_KEY
-    })
-
     return (
         <div className={s.roadContainer}>
             <div className={s.roadTextContainer}>
                 <div className={s.roadText}>
-                    <h2 className={s.roadTextHeader}>/ Как добраться</h2>
+                    <Element name='road'>
+                        <h2 className={s.roadTextHeader}>/ Как добраться</h2>
+                    </Element>
                     <div className={s.roadTextDescriptionContainer}>
                         <p className={s.roadTextDescription}>
                             Меловой карьер Белый колодец расположен в 12
@@ -44,7 +39,6 @@ export const Road = () => {
                 </div>
             </div>
             <div className={s.mapContainer}>
-                {/* { isLoaded ? <Map center={defaultCenter}/> : <h2>ХУЙ</h2>} */}
                 <YMaps >
                     <Map className={s.mapYandex} defaultState={{ center: [51.628, 38.968], zoom: 15 }}>
                         <Placemark geometry={[51.628, 38.968]} />

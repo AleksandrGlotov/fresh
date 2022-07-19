@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import s from './App.module.scss';
 import { AboutFresh } from './components/AboutFresh/Aboutfresh';
 import { Bands } from './components/Bands/Bands';
@@ -15,18 +16,20 @@ import { Tickets } from './components/Tickets/Tickets';
 
 const App = () => {
   return (
-    <div className={s.container}>
-      <FirstScreen />
-      <AboutFresh />
-      <Bands />
-      <Tickets />
-      <Eat />
-      <Sleep />
-      <Games />
-      <InfoBlock />
-      <Road />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className={s.container}>
+        <FirstScreen />
+        <AboutFresh />
+        <Bands />
+        <Tickets />
+        <Eat />
+        <Sleep />
+        <Games />
+        <InfoBlock />
+        <Road />
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }
 
