@@ -8,6 +8,7 @@ import burgerOff from '../FirstScreen/image/burgerOff.svg'
 import animation from '../common/linkAnimation.module.scss'
 import { Link } from 'react-scroll'
 import { slide as Menu } from 'react-burger-menu'
+import { useState } from 'react'
 
 
 export const Header = () => {
@@ -96,19 +97,88 @@ export const Header = () => {
 }
 
 const BurgerMenu = () => {
+
+	const [isOpen, setOpen] = useState(false)
+
+	const handleIsOpen = () => {
+		setOpen(!isOpen)
+	}
+
+	const closeSideBar = () => {
+		setOpen(false)
+	}
 	return (
 		<Menu
 			width={ '100%' }
 			right 
 			customBurgerIcon={ <img src={burger} /> }
-			customCrossIcon={ <img src={burgerOff} /> }>
-				<a id="bands" className="menu-item" href="/">Участники</a>
-				<a id="about" className="menu-item" href="/about">О фестивале</a>
-				<a id="tickets" className="menu-item" href="/tickets">Билеты</a>
-				<a id="sleep" className="menu-item" href="/sleep">Где жить</a>
-				<a id="games" className="menu-item" href="/games">Развлечения</a>
-				<a id="info" className="menu-item" href="/info">FAQ</a>
-				<a id="road" className="menu-item" href="/road">Как добраться</a>
+			customCrossIcon={ <img src={burgerOff} /> }
+			isOpen={isOpen}
+			onOpen={handleIsOpen}
+			onClose={handleIsOpen}>
+				<Link
+					className="menu-item"
+					to="bands"
+					smooth={true}
+					duration={500}
+					offset={-100}
+					onClick={closeSideBar}>
+						Участники
+				</Link>
+				<Link
+					className="menu-item"
+					to="about"
+					smooth={true}
+					duration={500}
+					offset={-100}
+					onClick={closeSideBar}>
+						О фестивале
+				</Link>
+				<Link
+					className="menu-item"
+					to="tickets"
+					smooth={true}
+					duration={500}
+					offset={-100}
+					onClick={closeSideBar}>
+						Билеты
+				</Link>
+				<Link
+					className="menu-item"
+					to="sleep"
+					smooth={true}
+					duration={500}
+					offset={-100}
+					onClick={closeSideBar}>
+						Где жить
+				</Link>
+				<Link
+					className="menu-item"
+					to="games"
+					smooth={true}
+					duration={500}
+					offset={-100}
+					onClick={closeSideBar}>
+						Развлечения
+				</Link>
+				<Link
+					className="menu-item"
+					to="info"
+					smooth={true}
+					duration={500}
+					offset={-100}
+					onClick={closeSideBar}>
+						FAQ
+				</Link>
+				<Link
+					className="menu-item"
+					to="road"
+					smooth={true}
+					duration={500}
+					offset={-100}
+					onClick={closeSideBar}>
+						Как добраться
+				</Link>
 				<div>
 					<img className={s.headerLinksImage} src={vk}></img>
 					<img className={s.headerLinksImage} src={instagramm}></img>
